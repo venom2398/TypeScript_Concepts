@@ -1,0 +1,26 @@
+An interface in TypeScript is a syntactical structure that defines the types of properties and methods an object should contain, without implementing the actual functionality. 
+It provides a blueprint for objects, helping developers catch errors during development by enforcing type constraints.
+------------------------------
+Example 1)
+interface detail{
+  name: string
+}
+
+function details(x:detail){
+  console.log(x.name);
+}
+
+details({name:"kiran"})
+------------------------------
+Example 2)
+interface detail{
+  name:string,
+  age:number
+}
+
+function personalDetails(x: detail){
+  console.log(`${x.name} is ${x.age}`);
+}
+
+personalDetails({name:"Basava", age:23});
+------------------------------
