@@ -1,0 +1,28 @@
+Classes are a fundamental component of object-oriented programming (OOP), and TypeScript includes them as a part of the language. 
+They provide a great deal of flexibility in structuring your code.
+Classes in TypeScript support features such as inheritance, interfaces, access modifiers, and more.
+
+List of some features of classes.
+1)Type Annotations
+2)Access Modifiers
+3)Constructors
+4)Inheritance
+5)Abstract Classes
+6)Static Properties and Methods
+7)Getters and Setters
+
+example:-
+class Greeter {
+  greeting: string;
+
+  constructor(message: string) {
+	this.greeting = message;
+  }
+
+  greet() {
+	console.log(`Hello, ${this.greeting}`);
+  }
+}
+
+let greeter = new Greeter('TypeScript');
+greeter.greet();
