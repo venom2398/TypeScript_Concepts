@@ -1,0 +1,45 @@
+A TypeScript decorator is a special kind of declaration that can be attached to a class, method, property, or parameter to modify its behavior. 
+Decorators are essentially functions that take the decorated element (such as a class or method) as an argument and allow you to 
+add metadata, modify properties, or change the functionality of that element. They are often used for metaprogramming, 
+allowing developers to add extra capabilities to code in a more readable and declarative way.
+
+# Purpose of TypeScript Decorators
+Decorators in TypeScript are commonly used for:
+1. Class Enhancements: Adding properties, methods, or metadata to classes without changing the class's code directly.
+2. Dependency Injection: Providing instances of services or dependencies automatically, often seen in frameworks like Angular.
+3. Logging and Validation: Adding logging, validation, or other cross-cutting concerns to methods and properties in a centralized way.
+4. Metadata Annotation: Adding additional metadata to classes, methods, or properties, which is especially useful for libraries or frameworks that rely on runtime reflection.
+
+# Types of Decorators in TypeScript:
+1. Class Decorators: Used to modify or observe a class definition.
+2. Method Decorators: Used to modify the behavior of a method.
+3. Property Decorators: Used to add behavior to a class property.
+4. Parameter Decorators: Used to inspect or modify parameters of a class method.
+
+# Example:
+Here’s an example using a simple class decorator to log when an instance of the class is created.
+
+// A decorator function that logs when a new instance is created
+function LogClass(constructor: Function) {
+  console.log(`Creating instance of ${constructor.name}`);
+}
+
+// Applying the decorator to a class
+@LogClass
+class Person {
+  constructor(public name: string) {}
+}
+
+const person1 = new Person("Alice"); // Logs: "Creating instance of Person"
+
+
+In this example:
+- The `LogClass` decorator is applied to the `Person` class using the `@LogClass` syntax.
+- When `Person` is instantiated, `LogClass` logs a message, showing how decorators can add behavior to class creation.
+
+# Key Points:
+- Decorators provide a powerful way to add features to code in a readable, declarative style.
+- They are often used in frameworks, such as Angular, to manage dependency injection and lifecycle events.
+- TypeScript decorators are experimental and require the `"experimentalDecorators": true` option in `tsconfig.json` to be enabled.
+
+In summary, decorators in TypeScript enhance and modify the behavior of classes, methods, and properties in a way that promotes clean, maintainable, and reusable code.
