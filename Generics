@@ -1,0 +1,28 @@
+They allow a type to be specified dynamically, providing a way to create reusable and 
+general-purpose functions, classes, and interfaces without sacrificing type safety.
+
+Why Are Generics Useful?
+- Type Safety, Reusability, Flexibility
+
+1) example: -
+function identity<T>(arg: T): T {
+  return arg;
+}
+
+let output1 = identity<string>("Hello, TypeScript!");
+let output2 = identity<number>(42);
+
+console.log(output1); // Output: Hello, TypeScript!
+console.log(output2); // Output: 42
+
+2) example: -
+
+function getFirstElement<T>(arr: T[]): T {
+  return arr[0];
+}
+
+const firstNumber = getFirstElement<number>([1, 2, 3]); // Returns 1, type is number
+const firstString = getFirstElement<string>(["a", "b", "c"]); // Returns "a", type is string
+
+console.log(firstString);
+console.log(firstNumber);
