@@ -1,0 +1,15 @@
+namespace is a way to organize and group related code, such as functions, classes, interfaces, or variables, under a single name.
+This helps avoid naming conflicts by encapsulating code within a specific scope.
+
+namespace MathUtils {
+  export function add(a: number, b: number): number {
+    return a + b;
+  }
+
+  export function subtract(a: number, b: number): number {
+    return a - b;
+  }
+}
+
+console.log(MathUtils.add(5, 3));       // Output: 8
+console.log(MathUtils.subtract(10, 4)); // Output: 6
