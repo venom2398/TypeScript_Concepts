@@ -74,6 +74,8 @@ class Person {
 }
 
 const person = new Person(1, "Alice");
-console.log(person.id); // Accessible, but read-only
 // person.id = 2;      // Error: Cannot assign to 'id' because it is read-only
+person.name = "kiran"; // Accessible and assignable
+console.log(person.id); // Accessible, but read-only
+console.log(person.name); // Accessible
 
