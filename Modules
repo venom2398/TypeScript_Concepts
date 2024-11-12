@@ -1,0 +1,12 @@
+A module in TypeScript is a file containing code, where variables, functions, classes, or interfaces are exported and can be imported into other files. 
+By using export and import keywords, modules can share or restrict access to specific elements between different files, ensuring better organization and modularity.
+
+example:-
+
+export function add(x: number, y: number): number {
+  return x + y;
+}
+---------
+import { add } from './math';
+
+console.log(add(4, 5)); // Outputs: 9
