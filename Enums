@@ -1,0 +1,22 @@
+An enum (short for “enumeration”) is a special data type in TypeScript that allows you to define a set of named constants.
+Enums make it easier to work with a group of related values and improve code readability and maintainability.
+
+example: -
+enum Direction {
+  Up = "UP",
+  Down = "DOWN",
+  Left = "LEFT",
+  Right = "RIGHT"
+}
+
+console.log(Direction.Up);    // Output: "UP"
+console.log(Direction.Down);  // Output: "DOWN"
+console.log(Direction.Left);  // Output: "LEFT"
+console.log(Direction.Right); // Output: "RIGHT"
+
+function move(direction: Direction) {
+  console.log(`Moving ${direction}`);
+}
+
+move(Direction.Up);    // Output: Moving UP
+move(Direction.Left);  // Output: Moving LEFT
