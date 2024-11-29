@@ -31,8 +31,20 @@ class Person {
 }
 
 const person1 = new Person("Alice"); // Logs: "Creating instance of Person"
+/************************************/
+another Example :
+function PizzaStore(target: typeof Pizza) {
+  console.log(`Creating instance of ${target.name}`);
+}
 
+@PizzaStore
+class Pizza {
+  constructor(public name: string) {}
+}
 
+const a = new Pizza("Peperoni");
+console.log(a); // Output: Creating instance of Pizza (assuming modern browser with decorator support)
+/************************************/
 In this example:
 - The `LogClass` decorator is applied to the `Person` class using the `@LogClass` syntax.
 - When `Person` is instantiated, `LogClass` logs a message, showing how decorators can add behavior to class creation.
